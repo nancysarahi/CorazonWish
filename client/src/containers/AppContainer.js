@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import "./App.css";
 import App from "../App";
-import {loadMyCatList} from "../actions";
+import {loadMyCatList} from "./actions";
 
 function mapDispatchToProps(dispatch) {
   return {
