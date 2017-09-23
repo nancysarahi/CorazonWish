@@ -8,7 +8,7 @@ function ListOfCats(props) {
         return (
         <div key={i}>
                 <li>{cat.name}</li>
-            <Link to={"/CatDetail/" + cat.id}> View Cat </Link>
+            <Link to={"/CatDetail/" + cat._id}> View Cat </Link>
         </div>);
     });
     return (

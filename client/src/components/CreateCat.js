@@ -35,7 +35,7 @@ class CreateCat extends Component {
                 <form onSubmit={(e) => {
                     e.preventDefault();
                     if (this.props.createCat) {
-                        this.props.createCat(this.state);
+                        this.props.createCat(this.state.cat);
                     }
                 }}>
                     <div>

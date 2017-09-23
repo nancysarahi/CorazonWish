@@ -3,7 +3,7 @@ import React from "react";
 
 function CatDetail(props) {
     const catId = props.match.params.id;
-    const cat = props.cats.find(c => c.id == catId) || {};
+    const cat = props.cats.find(c => c._id == catId) || {};
     return (   
         <div>
           <h3>{cat.name}</h3>

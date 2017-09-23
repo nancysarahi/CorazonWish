@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Dashboard from "./components/Dashboard";
 import ListOfCats from "./containers/ListOfCatsContainer";
 import CreateCat from "./containers/CreateCatContainer";
 import CatDetail from "./containers/CatDetailContainer";
@@ -19,6 +20,7 @@ class App extends Component {
         <Route path="/ListOfCats" component={ListOfCats} />
         <Route path="/CreateCat" component={CreateCat} />
         <Route path="/CatDetail/:id" component={CatDetail} />
+        <Route path="/" component={Dashboard} />
         </Switch>
       </div>
       </BrowserRouter>
