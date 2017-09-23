@@ -45,7 +45,7 @@ export function update(request, response) {
 }
 
 export function remove(request, response) {
-    CatModel.findByIdAndRemove({_id: request.params.id})
+    CatModel.findByIdAndRemove(request.params.id).exec()
     .then(cats => {
         return response.json(cats);
     });

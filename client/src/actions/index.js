@@ -26,7 +26,7 @@ export function createCat(cat) {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(cat)
-        }).then(() => dispatch(loadMyCatList()));
+        }).then(() => dispatch(loadMyCatList(cat)));
     }
 }
 

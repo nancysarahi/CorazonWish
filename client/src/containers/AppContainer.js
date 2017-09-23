@@ -3,7 +3,6 @@ import "./App.css";
 import App from "../App";
 import {loadMyCatList} from "../actions";
 
-
 function mapDispatchToProps(dispatch) {
   return {
     loadMyCatList: function(cat) {
