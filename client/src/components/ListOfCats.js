@@ -13,9 +13,7 @@ render(){
         return (
         <div key={cat._id}>
                 <li>{cat.name}</li>
-                <button
-          onClick={() => this.handleDelete(cat)}
-        >
+        <button onClick={() => this.handleDelete(cat)}>
           Delete
         </button>
             <Link to={"/CatDetail/" + cat._id}> View Cat </Link>

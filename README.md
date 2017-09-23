@@ -17,10 +17,10 @@ CHECK!!
     * Use prop types to define what props the component needs
     * It should probably need a prop named after the plural of your model, and it should probably be an array
     * Probably want to map over this array and create some divs or li’s showing 3 of the properties of the item -->
-CHECK!! -->
 
-    <!-- * Create a Link on each item so you can navigate to the detail page  -->
-    * Create a button on each item so you can delete the item
+<!-- 
+    <!-- * Create a Link on each item so you can navigate to the detail page 
+    * Create a button on each item so you can delete the item --> -->
 
 <!-- * Create a class component that makes a new model (redux fetch practice)
     * Create a form and a button
@@ -29,7 +29,7 @@ CHECK!! -->
     * Register onChange for each input and use setState to store the information typed in
     * Register onSubmit for the form.  -->
 
-    * onSubmit call an action called createThing(change it to make sense for your model)
+    <!-- * onSubmit call an action called createThing(change it to make sense for your model) -->
 <!-- * Create a function component that shows details of one thing (UserDetail)
     * Use a prop that has the array of your models
     * Use a parameter from the route path /:id to find the model to show

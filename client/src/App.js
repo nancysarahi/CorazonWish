@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-      <div>
+      <div className="App-header">
         <SideNav />
         <Switch>
         <Route path="/ListOfCats" component={ListOfCats} />
