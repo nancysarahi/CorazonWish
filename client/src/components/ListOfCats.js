@@ -1,13 +1,23 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import {connect} from "react-redux";
+import React,{Component} from 'react';
 
-function ListOfCats(props) {
-    const catDivs = props.cats.map(function(cat, i) {
+class ListOfCats extends Component {
+    handleDelete(cat) {
+        if(this.props.removeCat) {
+          this.props.removeCat(cat._id)
+        }
+      }
+render(){
+    const catDivs = this.props.cats.map(cat => {
         return (
-        <div key={i}>
+        <div key={cat._id}>
                 <li>{cat.name}</li>
+                <button
+          onClick={() => this.handleDelete(cat)}
+        >
+          Delete
+        </button>
             <Link to={"/CatDetail/" + cat._id}> View Cat </Link>
         </div>);
     });
@@ -16,6 +26,7 @@ function ListOfCats(props) {
             {catDivs}
         </div>
     );
+}
 }
 
 export default(ListOfCats);

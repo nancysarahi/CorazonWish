@@ -1,33 +1,18 @@
 import React, { Component } from "react";
-import { createCat } from "../actions";
 
 class CreateCat extends Component {
     constructor() {
         super();
         this.state = {
-            cat:{
-            name: "",
-            age: 0,
-            breed: "",
-            favoriteItem: "",
-            sleepingTime: ""
+            cat: {
+                name: "",
+                age: 0,
+                breed: "",
+                favoriteItem: "",
+                sleepingTime: ""
             }
         }
     }
-        // handleChange(e) {
-        //     let cat = this.state.cat;
-        //     cat[e.target.name] = e.target.value;
-        //     this.setState({ cat: cat });
-        // }
-
-        // handleSubmit(e) {
-        //     e.preventDefault();
-        //     if (this.props.createCat) {
-        //         this.props.createCat(this.state.cat);
-        //         this.setState({cat:{}});
-        //         this.render();
-        //     };
-        // }
 
     render() {
         return (
@@ -40,39 +25,54 @@ class CreateCat extends Component {
                 }}>
                     <div>
                         <div>
-                            Name: <input onChange={(e) => {
-                                this.setState({
-                                    name: e.target.value
-                                });
-                            }} />
+                            Name <input
+                                onChange={(e) => {
+                                    const cat = { name: e.target.value };
+                                    this.setState({
+                                        cat: Object.assign(this.state.cat, cat)
+                                    });
+                                }}
+                            />
                         </div>
                         <div>
-                            Age: <input onChange={(e) => {
-                                this.setState({
-                                    age: e.target.value
-                                });
-                            }} />
+                            Age: <input
+                                onChange={(e) => {
+                                    const cat = { age: e.target.value };
+                                    this.setState({
+                                        cat: Object.assign(this.state.cat, cat)
+                                    });
+                                }}
+                            />
                         </div>
                         <div>
-                            Breed: <input onChange={(e) => {
-                                this.setState({
-                                    breed: e.target.value
-                                });
-                            }} />
+                            Breed <input
+                                onChange={(e) => {
+                                    const cat = { breed: e.target.value };
+                                    this.setState({
+                                        cat: Object.assign(this.state.cat, cat)
+                                    });
+                                }}
+                            />
                         </div>
                         <div>
-                            Favorite Item: <input onChange={(e) => {
-                                this.setState({
-                                    favoriteItem: e.target.value
-                                });
-                            }} />
+                            Favorite Item: <input
+                                onChange={(e) => {
+                                    const cat = { favoriteItem: e.target.value };
+                                    this.setState({
+                                        cat: Object.assign(this.state.cat, cat)
+                                    });
+                                }}
+                            />
                         </div>
                         <div>
-                            Sleeping Time: <input onChange={(e) => {
-                                this.setState({
-                                    sleepingTime: e.target.value
-                                });
-                            }} />
+                            Sleeping Time: <input
+                                onChange={(e) => {
+                                    const cat = { sleepingTime: e.target.value };
+                                    this.setState({
+                                        cat: Object.assign(this.state.cat, cat)
+                                    });
+                                }}
+                            />
                         </div>
                     </div>
                     <button>Create Cat</button>
