@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
-import ListOfCats from "./containers/ListOfCatsContainer";
-import CreateCat from "./containers/CreateCatContainer";
-import CatDetail from "./containers/CatDetailContainer";
+import ListOfKids from "./containers/ListOfKidsContainer";
+import CreateKid from "./containers/CreateKidContainer";
+import KidDetail from "./containers/KidDetailContainer";
 import SideNav from "./components/SideNav";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 class App extends Component {
   componentDidMount() {
-    this.props.loadMyCatList();
+    this.props.loadKids();
   }
   render() {
     return (
@@ -17,9 +17,9 @@ class App extends Component {
       <div className="App-header">
         <SideNav />
         <Switch>
-        <Route path="/ListOfCats" component={ListOfCats} />
-        <Route path="/CreateCat" component={CreateCat} />
-        <Route path="/CatDetail/:id" component={CatDetail} />
+        <Route path="/kids" component={ListOfKids} />
+        <Route path="/createkid" component={CreateKid} />
+        <Route path="/KidDetail/:id" component={KidDetail} />
         <Route path="/" component={Dashboard} />
         </Switch>
       </div>

@@ -1,13 +1,13 @@
 import {combineReducers} from "redux";
 
-function cats(state = [], action) {
-  if (action.type === "MY_CAT_LIST_LOADED"){
+function kids(state = [], action) {
+  if (action.type === "KIDS_LOADED"){
     return action.value
   }
 return state;
 }
 
 const rootReducer = combineReducers({
-  cats, 
+  kids, 
 });
 export default rootReducer;

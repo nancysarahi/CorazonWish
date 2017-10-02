@@ -1,12 +1,12 @@
 import {connect} from 'react-redux';
 import "../App.css";
 import App from "../App";
-import {loadMyCatList} from "../actions";
+import {loadKids} from "../actions";
 
 function mapDispatchToProps(dispatch) {
   return {
-    loadMyCatList: function(cat) {
-      dispatch(loadMyCatList(cat));
+    loadKids: function(kid) {
+      dispatch(loadKids(kid));
     }
   };
 }

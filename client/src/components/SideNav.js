@@ -11,13 +11,13 @@ function SideNav() {
           </Link>
         </li>
         <li>
-          <Link to="/ListOfCats">
-            <i className="fa fa-fw fa-bar-chart-o" /> List of Cats
+          <Link to="/ListOfKids">
+            <i className="fa fa-fw fa-bar-chart-o" /> List of Wish Kids
           </Link>
         </li>
         <li>
-          <Link to="/CreateCat">
-            <i className="fa fa-fw fa-table" /> Create Cat
+          <Link to="/CreateKid">
+            <i className="fa fa-fw fa-table" /> Create Wish Kid Entry
           </Link>
         </li>
       </ul>

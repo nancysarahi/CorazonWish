@@ -1,40 +1,39 @@
-export function myCatListLoaded(cats) {
+export function kidsLoaded(kids) {
     return {
-        type: "MY_CAT_LIST_LOADED",
-        value: cats,
+        type: "KIDS_LOADED",
+        value: kids,
     }
 }
 
-export function loadMyCatList() {
+export function loadKids() {
     return function (dispatch) {
         dispatch({
-            type: "LOAD_MY_CAT_LIST"
+            type: "LOAD_KIDS"
         });
-        fetch("/cats")
+        fetch("/kids")
             .then((response) => {
                 return response.json();
-            }).then((cats) => {
-                dispatch(myCatListLoaded(cats));
+            }).then((kids) => {
+                dispatch(kidsLoaded(kids));
             });
     };
 }
 
-
-export function createCat(cat) {
+export function createKid(kid) {
     return function (dispatch) {
-        fetch("/cats", {
+        fetch("/kids", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(cat)
-        }).then(() => dispatch(loadMyCatList(cat)));
+            body: JSON.stringify(kid)
+        }).then(() => dispatch(loadKids(kid)));
     }
 }
 
-export function removeCat(id) {
+export function removeKid(id) {
     return function (dispatch) {
-        fetch("/cats/" + id, {
+        fetch("/kids/" + id, {
             method: "DELETE",
             body: JSON.stringify(id)
-        }).then(() => dispatch(loadMyCatList()));
+        }).then(() => dispatch(loadKids()));
     }
 }

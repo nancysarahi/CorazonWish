@@ -1,10 +1,10 @@
 import React from "react";
-import ListOfCats from "../containers/ListOfCatsContainer";
+import ListOfKids from "../containers/ListOfKidsContainer";
 
 function Dashboard() {
   return (
 <div>
-<ListOfCats />
+<ListOfKids />
 
 </div>
 

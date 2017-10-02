@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import CatDetail from "../components/CatDetail";
+import KidDetail from "../components/KidDetail";
 
 function mapStateToProps(state) {
     return {
-        cats: state.cats
+        kids: state.kids
     }
 }
 
@@ -12,4 +12,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CatDetail);
+export default connect(mapStateToProps, mapDispatchToProps)(KidDetail);
